@@ -163,7 +163,7 @@ export default function Home() {
               <p className="text-lg leading-relaxed">
                 As a Regents Scholar and Engineering Honors Student, I've worked with the 
                 UCSB Vision Research Lab and the Exoplanet Polarimetry Lab, implementing advanced 
-                algorithms and developing high-fidelity simulations.
+                algorithms, developing high-fidelity simulations, and building robust software.
               </p>
               <p className="text-lg leading-relaxed">
                 My research interests include machine learning, simulation, optimization, and computational physics. 
