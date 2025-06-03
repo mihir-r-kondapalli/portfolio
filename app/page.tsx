@@ -273,8 +273,8 @@ export default function Home() {
                 <ContactLink icon="github" href="https://github.com/mihir-r-kondapalli">
                   github.com/mihir-r-kondapalli
                 </ContactLink>
-                <ContactLink icon="linkedin" href="https://linkedin.com/in/mihirkondapalli">
-                  linkedin.com/in/mihirkondapalli
+                <ContactLink icon="linkedin" href="https://linkedin.com/in/mihir-kondapalli">
+                  linkedin.com/in/mihir-kondapalli
                 </ContactLink>
               </div>
             </div>
