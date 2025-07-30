@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import SectionHeader from "./components/SectionHeader";
 import ProjectCard from "./components/ProjectCard";
 import ContactLink from "./components/ContactLink";
+import ExperienceCard from "./components/ExperienceCard";
 // EmailJS will be loaded via CDN script tag
 
 export default function Home() {
@@ -28,8 +29,8 @@ export default function Home() {
     document.head.appendChild(script);
 
     const handleScroll = () => {
-      const sections = ["intro", "about", "projects", "contact"];
-      const scrollPosition = window.scrollY + 100;
+      const sections = ["intro", "about", "experience", "projects", "contact"];
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -119,7 +120,7 @@ export default function Home() {
     <>
       <Navigation currentSection={currentSection} />
       
-      <main className="max-w-6xl mx-auto px-6 pt-24">
+      <main className="max-w-4xl mx-auto px-6 pt-24">
         {/* Intro Section */}
         <section id="intro" className="min-h-screen flex flex-col justify-center py-16">
           <div className="space-y-6 max-w-3xl animate-fade-in">
@@ -128,13 +129,19 @@ export default function Home() {
               <span className="block gradient-text">Mihir Kondapalli</span>
             </h1>
             <h2 className="text-2xl text-gray-600">
-              Software Engineer & Researcher
+              Software Engineering Intern & Academic Researcher
             </h2>
             <p className="text-xl leading-relaxed max-w-2xl">
               I build digital frameworks, develop simulations, and research innovative technologies 
               at the intersection of machine learning and computational science.
             </p>
             <div className="pt-8 flex space-x-4">
+              <Link 
+                href="#experience" 
+                className="btn-primary"
+              >
+                Experience
+              </Link>
               <Link 
                 href="#projects" 
                 className="btn-primary"
@@ -157,8 +164,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 pt-12">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
-                I'm a Computer Science major at UC Santa Barbara with a passion for building 
-                computational frameworks and researching innovative technologies.
+                I'm a Computer Science major at UC Santa Barbara currently working at Teledyne FLIR as a
+                Software Engineering Intern.
               </p>
               <p className="text-lg leading-relaxed">
                 As a Regents Scholar and Engineering Honors Student, I've worked with the 
@@ -194,6 +201,45 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Work Experience Section */}
+        <section id="experience" className="py-24">
+          <SectionHeader>Work Experience</SectionHeader>
+          <div className="grid grid-cols-1 gap-8 pt-12">
+            <ExperienceCard
+              title="Software Engineering Intern"
+              company="Teledyne FLIR"
+              date="July 2025 - Present"
+              bullets={[
+              ]}
+              logoSrc="/logos/flir.jpeg"
+              logoAlt="Teledyne FLIR logo"
+            />
+            <ExperienceCard
+              title="Software Researcher"
+              company="UCSB Vision Research Lab"
+              date="April 2025 – June 2025"
+              bullets={[
+                "Utilized Docker to deploy image algorithms within the BISQUE framework",
+                "Researched optimal image stitching algorithm implementations",
+              ]}
+              logoSrc="/logos/ucsb.png"
+              logoAlt="UCSB logo"
+            />
+            <ExperienceCard
+              title="Software and Machine Learning Researcher"
+              company="UCSB Exoplanet Polarimetry Lab"
+              date="April 2024 – Present"
+              bullets={[
+                "Built a JAX-based ML framework to analyze protoplanetary disk imagery",
+                "Developed optimization pipelines integrating complex image processing",
+                "Working towards publishing framework to Journal of Open Source Software"
+              ]}
+              logoSrc="/logos/ucsb.png"
+              logoAlt="UCSB logo"
+            />
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section id="projects" className="py-24">
           <SectionHeader>Featured Projects</SectionHeader>
@@ -209,13 +255,6 @@ export default function Home() {
               link="https://fourthandsim.vercel.app"
             />
             <ProjectCard
-              title="Bisque - UCSB Vision Research Lab"
-              description="A web-based platform specifically designed to provide researchers with organizational and quantitative analysis
-              tools for up to 5D image data. Creating modules that take advantage of cutting edge machine learning and image processing algorithms."
-              tags={['Computer Vision', 'Docker', 'Python', 'OpenCV', 'Optimization', 'FastAPI', 'Image Processing', 'Data Structures and Algorithms']}
-              link="https://bisque2.ece.ucsb.edu/client_service/"
-            />
-            <ProjectCard
               title="GRaTeR Scattered Light Disk Framework"
               description="A complex, JAX-based machine learning framework for analyzing and simulating scattered light disks,
               providing high-fidelity modeling for astrophysics research."
@@ -223,7 +262,7 @@ export default function Home() {
               link="https://github.com/UCSB-Exoplanet-Polarimetry-Lab/GRaTeR-JAX"
             />
             <ProjectCard
-              title="GRaTeR Image Generator"
+              title="GRaTeR Image App"
               description="A web application to simulate and visualize protoplanetary disk images using a custom JAX disk framework, used by multiple research groups."
               tags={['Next.js', 'React', 'Django', 'JAX', 'Astrophysics', 'Typescript', 'Docker', 'Image Processing', 'Memory Management', 'Vercel', 'Railway']}
               link="https://scattered-light-disks.vercel.app"
@@ -249,6 +288,12 @@ export default function Home() {
               link="https://github.com/mihir-r-kondapalli/RocketSimulation"
             />
             <ProjectCard
+              title="Interactive Election Simulation Game"
+              description="A web based game where users can add votes to a map given certain rules in order to win majorities for the Presidency, Senate, and House of Representatives."
+              tags={['React', 'Vite', 'TypeScript', 'Visualization']}
+              link="https://github.com/mihir-r-kondapalli/election-ts/"
+            />
+            <ProjectCard
               title="Minefield"
               description="A real-time online multiplayer game."
               tags={['Web Sockets', 'Python', 'Pickle', 'Network', 'Pygame']}
@@ -263,8 +308,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 pt-12">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
-                I'm always open to discussing research opportunities, collaboration on projects, 
-                or potential positions. Feel free to reach out through any of the channels below.
+                I'm always open to discussing research opportunities and collaboration on projects. 
+                Feel free to reach out through any of the channels below.
               </p>
               <div className="space-y-4 pt-4">
                 <ContactLink icon="mail" href="mailto:mihir.kondapalli@gmail.com">
