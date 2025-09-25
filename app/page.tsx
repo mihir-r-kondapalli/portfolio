@@ -288,10 +288,10 @@ export default function Home() {
               link="https://github.com/mihir-r-kondapalli/RocketSimulation"
             />
             <ProjectCard
-              title="Interactive Election Simulation Game"
-              description="A web based game where users can add votes to a map given certain rules in order to win majorities for the Presidency, Senate, and House of Representatives."
-              tags={['React', 'Vite', 'TypeScript', 'Visualization']}
-              link="https://github.com/mihir-r-kondapalli/election-ts/"
+              title="NBA ML"
+              description="A machine learning model that uses data from the nba_api package to quantify the value of each statistic to the final outcome of a game."
+              tags={['Scikit-Learn', 'Pandas', 'Matplotlib', 'Numpy']}
+              link="https://github.com/mihir-r-kondapalli/nba-ml"
             />
             <ProjectCard
               title="Minefield"
