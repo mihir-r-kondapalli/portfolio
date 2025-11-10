@@ -210,6 +210,8 @@ export default function Home() {
               company="Teledyne FLIR"
               date="July 2025 - Present"
               bullets={[
+                "Designed and implemented testing infrastructures for automotive cameras",
+                "Contributed to engineering GUIs and built internal tools for data automation",
               ]}
               logoSrc="/logos/flir.jpeg"
               logoAlt="Teledyne FLIR logo"
