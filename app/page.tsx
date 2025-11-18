@@ -132,8 +132,8 @@ export default function Home() {
               Software Engineering Intern & Academic Researcher
             </h2>
             <p className="text-xl leading-relaxed max-w-2xl">
-              I build digital frameworks, develop simulations, and research innovative technologies 
-              at the intersection of machine learning and computational science.
+              I build software for a diverse range of applications, from scientific computing
+              and machine learning to full-stack development and software-hardware interfacing.
             </p>
             <div className="pt-8 flex space-x-4">
               <Link 
@@ -217,24 +217,24 @@ export default function Home() {
               logoAlt="Teledyne FLIR logo"
             />
             <ExperienceCard
+              title="Software and Machine Learning Researcher"
+              company="UCSB Exoplanet Polarimetry Lab"
+              date="April 2024 – Present"
+              bullets={[
+                "Built a JAX-based ML package to analyze protoplanetary disk imagery",
+                "Developed optimization pipelines integrating complex image processing",
+                "Working towards publishing framework to Journal of Open Source Software"
+              ]}
+              logoSrc="/logos/ucsb.png"
+              logoAlt="UCSB logo"
+            />
+            <ExperienceCard
               title="Software Researcher"
               company="UCSB Vision Research Lab"
               date="April 2025 – June 2025"
               bullets={[
                 "Utilized Docker to deploy image algorithms within the BISQUE framework",
                 "Researched optimal image stitching algorithm implementations",
-              ]}
-              logoSrc="/logos/ucsb.png"
-              logoAlt="UCSB logo"
-            />
-            <ExperienceCard
-              title="Software and Machine Learning Researcher"
-              company="UCSB Exoplanet Polarimetry Lab"
-              date="April 2024 – Present"
-              bullets={[
-                "Built a JAX-based ML framework to analyze protoplanetary disk imagery",
-                "Developed optimization pipelines integrating complex image processing",
-                "Working towards publishing framework to Journal of Open Source Software"
               ]}
               logoSrc="/logos/ucsb.png"
               logoAlt="UCSB logo"
@@ -270,6 +270,13 @@ export default function Home() {
               link="https://scattered-light-disks.vercel.app"
             />
             <ProjectCard
+              title="Rocket Simulation"
+              description="An rk4 integration rocket simulator. Simulates burns and orbital transfers. Visualizes flight trajectories. Currently implementing tensorflow
+              agent to control the rocket."
+              tags={['Simulation', 'Physics', 'JAX', 'Numpy', 'Math', 'Visualization']}
+              link="https://github.com/mihir-r-kondapalli/RocketSimulation"
+            />
+            <ProjectCard
               title="Fast Radio Bursts - Northwestern CIERA"
               description="Explored the connection between FRBs and magnetars using CHIME and LISA data. Applied statistical analysis with Python and Pandas under PhD mentorship at CIERA."
               tags={['Statistics', 'Python', 'Pandas', 'Data Analysis', 'Visualization', 'Astrophysics']}
@@ -281,13 +288,6 @@ export default function Home() {
               13-page paper to the Journal of Student Research."
               tags={['Statistics', 'Python', 'Visualization', 'Data Analysis', 'Time Series Modeling', 'Writing']}
               link="https://www.jsr.org/hs/index.php/path/article/view/2976"
-            />
-            <ProjectCard
-              title="Rocket Simulation"
-              description="An rk4 integration rocket simulator. Simulates burns and orbital transfers. Visualizes flight trajectories. Currently implementing tensorflow
-              agent to control the rocket."
-              tags={['Simulation', 'Physics', 'JAX', 'Numpy', 'Math', 'Visualization']}
-              link="https://github.com/mihir-r-kondapalli/RocketSimulation"
             />
             <ProjectCard
               title="NBA ML"
