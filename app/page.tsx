@@ -247,6 +247,13 @@ export default function Home() {
           <SectionHeader>Featured Projects</SectionHeader>
           <div className="grid md:grid-cols-2 gap-8 pt-12">
             <ProjectCard
+              title="GRaTeR Scattered Light Disk Framework"
+              description="A complex, JAX-based machine learning framework for analyzing and simulating scattered light disks,
+              providing high-fidelity modeling for astrophysics research."
+              tags={['JAX', 'Python', 'Simulation', 'Sci-kit Learn', 'CUDA', 'Optimization', 'Computer Vision', 'Optics', 'Image Processing', 'Astrophysics']}
+              link="https://github.com/UCSB-Exoplanet-Polarimetry-Lab/GRaTeR-JAX"
+            />
+            <ProjectCard
               title="4th & Sim"
               description="A full-stack NFL simulation platform with predictive modeling, featuring a React/NextJS frontend, FastAPI backend,
               and PostgreSQL database. Includes a Pytorch football strategizer that wins ~55% of games. Simulations powered by R, C++,
@@ -255,13 +262,6 @@ export default function Home() {
                 'Docker', 'Dynamic Programming', 'Typescript'
               ]}
               link="https://fourthandsim.vercel.app"
-            />
-            <ProjectCard
-              title="GRaTeR Scattered Light Disk Framework"
-              description="A complex, JAX-based machine learning framework for analyzing and simulating scattered light disks,
-              providing high-fidelity modeling for astrophysics research."
-              tags={['JAX', 'Python', 'Simulation', 'Sci-kit Learn', 'CUDA', 'Optimization', 'Computer Vision', 'Optics', 'Image Processing', 'Astrophysics']}
-              link="https://github.com/UCSB-Exoplanet-Polarimetry-Lab/GRaTeR-JAX"
             />
             <ProjectCard
               title="GRaTeR Image App"
@@ -283,13 +283,6 @@ export default function Home() {
               link="https://github.com/mihir-r-kondapalli/REACH-Analysis"
             />
             <ProjectCard
-              title="Drought Indemnity Loss - MTF Challenge"
-              description="Analyzed time-series data regarding potential mitigation factors for the California drought crisis. Wrote and published a 13-page paper to the Journal of Student ResearchWrote and published a
-              13-page paper to the Journal of Student Research."
-              tags={['Statistics', 'Python', 'Visualization', 'Data Analysis', 'Time Series Modeling', 'Writing']}
-              link="https://www.jsr.org/hs/index.php/path/article/view/2976"
-            />
-            <ProjectCard
               title="NBA ML"
               description="A machine learning model that uses data from the nba_api package to quantify the value of each statistic to the final outcome of a game."
               tags={['Scikit-Learn', 'Pandas', 'Matplotlib', 'Numpy']}
@@ -297,9 +290,28 @@ export default function Home() {
             />
             <ProjectCard
               title="Minefield"
-              description="A real-time online multiplayer game."
+              description="A real-time online local multiplayer game."
               tags={['Web Sockets', 'Python', 'Pickle', 'Network', 'Pygame']}
               link="https://github.com/mihir-r-kondapalli/MinefieldWebSocketGame"
+            />
+            <ProjectCard
+              title="First Robotics Competition 2022 - Software"
+              description="Worked on the software team to develop the robot code for FRC 2022 using Java."
+              tags={['Java', 'Physics', 'Algorithms', 'Robotics']}
+              link="https://github.com/mvrt-115/frc2k22"
+            />
+            <ProjectCard
+              title="Orbits"
+              description="A gravity game built on a custom physics engine simulating n-body gravitational interactions with collision detection and orbital mechanics."
+              tags={['Pygame', 'Physics', 'Simulation', 'OOP', 'Math', 'Algorithms', 'cx-Freeze']}
+              link="https://github.com/mihir-r-kondapalli/Orbits"
+            />
+            <ProjectCard
+              title="Drought Indemnity Loss - MTF Challenge"
+              description="Analyzed time-series data regarding potential mitigation factors for the California drought crisis. Wrote and published a 13-page paper to the Journal of Student ResearchWrote and published a
+              13-page paper to the Journal of Student Research."
+              tags={['Statistics', 'Python', 'Visualization', 'Data Analysis', 'Time Series Modeling', 'Writing']}
+              link="https://www.jsr.org/hs/index.php/path/article/view/2976"
             />
           </div>
         </section>
