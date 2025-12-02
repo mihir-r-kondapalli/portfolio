@@ -105,3 +105,52 @@
     /* your custom styles */
   }
 }
+
+.background-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background-blobs::before,
+.background-blobs::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: blur(120px);
+  opacity: 0.4;
+  border-radius: 50%;
+  animation: floatBlobs 14s ease-in-out infinite;
+}
+
+.background-blobs::before {
+  background: #6366f1;
+  top: -10%;
+  left: -10%;
+}
+
+.background-blobs::after {
+  background: #ec4899;
+  bottom: -10%;
+  right: -5%;
+  animation-duration: 18s;
+}
+
+@keyframes floatBlobs {
+  0%   { transform: translate(0,0) scale(1); }
+  50%  { transform: translate(30px, -40px) scale(1.1); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+body {
+  background: #fafbff;
+}
+
+.project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

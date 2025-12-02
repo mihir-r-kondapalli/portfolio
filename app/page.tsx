@@ -29,7 +29,7 @@ export default function Home() {
     document.head.appendChild(script);
 
     const handleScroll = () => {
-      const sections = ["intro", "about", "experience", "projects", "contact"];
+      const sections = ["intro", "about", "experience", "skills", "projects", "contact"];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
@@ -118,6 +118,8 @@ export default function Home() {
 
   return (
     <>
+      <div className="background-blobs"></div>
+
       <Navigation currentSection={currentSection} />
       
       <main className="max-w-4xl mx-auto px-6 pt-24">
@@ -179,17 +181,6 @@ export default function Home() {
             </div>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-medium mb-4">Technical Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['Python', 'JAX', 'PyTorch', 'TensorFlow', 'C++', 'React', 'R', 'NextJS', 'FastAPI',
-                  'Django', 'AWS', 'Docker', 'CUDA', 'SQL', ].map((skill) => (
-                    <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
                 <h3 className="text-xl font-medium mb-4">Education</h3>
                 <div className="space-y-2">
                   <p className="font-medium">University of California, Santa Barbara</p>
@@ -210,8 +201,8 @@ export default function Home() {
               company="Teledyne FLIR"
               date="July 2025 - Present"
               bullets={[
-                "Designed and implemented testing infrastructures for automotive cameras",
-                "Contributed to engineering GUIs and built internal tools for data automation",
+                "Designed and implemented an automated testing infrastructure for automotive cameras",
+                "Developed GUIs and built internal tools for data automation",
               ]}
               logoSrc="/logos/flir.jpeg"
               logoAlt="Teledyne FLIR logo"
@@ -242,6 +233,43 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Technical Skills Section */}
+        <section id="skills" className="py-24">
+          <SectionHeader>Technical Skills</SectionHeader>
+          <div className="space-y-6 pt-12">
+            <div>
+              <h3 className="text-xl font-medium mb-4">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Python', 'C++', 'JavaScript', 'TypeScript', 'Java', 'C', 'Bash', 'R', 'SQL', 'HTML/CSS'].map((skill) => (
+                  <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-medium mb-4">Frameworks/Libraries</h3>
+              <div className="flex flex-wrap gap-2">
+                {['FastAPI', 'Django', 'NextJS', 'React', 'SpringBoot', 'JAX', 'PyTorch', 'Scikit-Learn', 'JUnit', 'Pytest'].map((skill) => (
+                  <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-medium mb-4">Technologies</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Git', 'AWS', 'PostgreSQL', 'Jira', 'JAMA', 'Bitbucket', 'Supabase', 'Docker', 'CI/CD', 'Linux', 'GPUs', 'LLMs'].map((skill) => (
+                  <span key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section id="projects" className="py-24">
           <SectionHeader>Featured Projects</SectionHeader>
@@ -266,7 +294,7 @@ export default function Home() {
             <ProjectCard
               title="GRaTeR Image App"
               description="A web application to simulate and visualize protoplanetary disk images using a custom JAX disk framework, used by multiple research groups."
-              tags={['Next.js', 'React', 'Django', 'JAX', 'Astrophysics', 'Typescript', 'Docker', 'Image Processing', 'Memory Management', 'Vercel', 'Railway']}
+              tags={['Next.js', 'React', 'Django', 'JAX', 'Astrophysics', 'Typescript', 'Image Processing', 'Memory Management', 'Vercel', 'Railway']}
               link="https://scattered-light-disks.vercel.app"
             />
             <ProjectCard

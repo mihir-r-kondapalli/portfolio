@@ -24,6 +24,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection }) => {
           <NavLink href="#intro" isActive={currentSection === "intro"}>Home</NavLink>
           <NavLink href="#about" isActive={currentSection === "about"}>About</NavLink>
           <NavLink href="#experience" isActive={currentSection === "experience"}>Experience</NavLink>
+          <NavLink href="#skills" isActive={currentSection === "skills"}>Skills</NavLink>
           <NavLink href="#projects" isActive={currentSection === "projects"}>Projects</NavLink>
           <NavLink href="#contact" isActive={currentSection === "contact"}>Contact</NavLink>
         </div>
@@ -51,6 +52,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection }) => {
             <MobileNavLink href="#intro" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
             <MobileNavLink href="#about" onClick={() => setIsMenuOpen(false)}>About</MobileNavLink>
             <MobileNavLink href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</MobileNavLink>
+            <MobileNavLink href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</MobileNavLink>
             <MobileNavLink href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</MobileNavLink>
             <MobileNavLink href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</MobileNavLink>
           </div>
