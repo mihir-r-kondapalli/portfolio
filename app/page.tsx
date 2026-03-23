@@ -198,6 +198,16 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 pt-12">
             <ExperienceCard
               title="Software Engineering Intern"
+              company="Synaptics"
+              date="June 2026 - September 2026"
+              bullets={[
+                // Need to add bullets
+              ]}
+              logoSrc="/logos/synaptics.jpeg"
+              logoAlt="Synaptics logo"
+            />
+            <ExperienceCard
+              title="Software Engineering Intern"
               company="Teledyne FLIR"
               date="July 2025 - Present"
               bullets={[
