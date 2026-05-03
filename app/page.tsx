@@ -209,7 +209,7 @@ export default function Home() {
             <ExperienceCard
               title="Software Engineering Intern"
               company="Teledyne FLIR"
-              date="July 2025 - Present"
+              date="July 2025 - May 2026"
               bullets={[
                 "Designed and implemented an automated testing infrastructure for automotive cameras",
                 "Developed GUIs and built internal tools for data automation",
