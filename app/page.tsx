@@ -166,10 +166,6 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 pt-12">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed">
-                I'm a Computer Science major at UC Santa Barbara currently working at Teledyne FLIR as a
-                Software Engineering Intern.
-              </p>
-              <p className="text-lg leading-relaxed">
                 As a Regents Scholar and Engineering Honors Student, I've worked with the 
                 UCSB Vision Research Lab and the Exoplanet Polarimetry Lab, implementing advanced 
                 algorithms, developing high-fidelity simulations, and building robust software.
@@ -211,8 +207,11 @@ export default function Home() {
               company="Teledyne FLIR"
               date="July 2025 - May 2026"
               bullets={[
-                "Designed and implemented an automated testing infrastructure for automotive cameras",
-                "Developed GUIs and built internal tools for data automation",
+                "Architected FLIR’s first safety-oriented Python validation framework for automotive infrared camera software",
+                "Designed core APIs and hardware abstraction layers used across validation, GUI, embedded, and systems teams",
+                "Implemented unified camera control interfaces over I2C for register, flash, and DRAM access across multiple products",
+                "Built an integration test framework combining mocked camera behavior with HW tests, created CI/CD pipelines",
+                "Developed multi-threaded GUIs for camera interaction to enhance development for systems engineers"
               ]}
               logoSrc="/logos/flir.jpeg"
               logoAlt="Teledyne FLIR logo"
